@@ -1,0 +1,126 @@
+.categorias {
+    padding: 80px 12.5%;
+}
+
+.categorias__titulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 46.8px;
+    text-align: center;
+    color: var(--cor-texto-principal);
+}
+
+.categorias__texto {
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin: 40px 0;
+}
+
+.categorias__lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "roupas roupas decoracao"
+    "canecas acessorios acessorios";
+    gap: 24px;
+    list-style-type: none;
+}
+
+.categorias__lista_item-roupas {
+    grid-area: roupas;
+}
+
+.categorias__lista_item-decoracao {
+    grid-area: decoracao;
+}
+
+.categorias__lista_item-canecas {
+    grid-area: canecas;
+}
+
+.categorias__lista_item-acessorios {
+    grid-area: acessorios;
+}
+
+.categorias__lista_item {
+    box-shadow: 0px 4px 24px 0px #7b7b7b26;
+}
+
+.categorias__lista_item_container img {
+    width: 100%;
+    height: 331px;
+    object-fit: contain;
+    padding: 30px;
+}
+
+.categorias__lista_item_container {
+    background-color: var(--cor-links);
+    text-align: center;
+}
+
+.categorias__lista_item_titulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 37.2px;
+    text-align: center;
+    color: var(--cor-texto-principal);
+    padding: 16px 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .categorias {
+        padding: 40px 8%;
+    }
+
+    .categorias__titulo {
+        font-size: 31px;
+        line-height: 37.2px;
+    }
+
+    .categorias__texto {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 24px 0 40px 0;
+    }
+
+    .categorias__lista_item_container {
+        padding: 10px;
+    }
+
+    .categorias__lista_item_titulo {
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and (max-width: 430px) {
+
+    .categorias {
+        padding: 32px 6.5%;
+    }
+
+    .categorias__titulo {
+        font-size: 25px;
+    }
+
+    .categorias__texto {
+        font-size: 16px;
+    }
+
+    .categorias__lista {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categorias__lista_item_titulo {
+        font-size: 25px;
+    }
+}
